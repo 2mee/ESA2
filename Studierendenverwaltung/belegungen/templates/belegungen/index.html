@@ -1,0 +1,14 @@
+{%  extends 'belegungen/base.html' %}
+
+{% block main_content %}
+{% if lehrveranstaltungen %}
+    <ul>
+        {% for l in lehrveranstaltungen %}
+            <li><a href = "{% url "belegungen:modul_detail" l.id  %}"><b>{{ l.lv_name }}</b></a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p> Es liegen keine Lehrveranstaltungen vor. Bitte eine anlegen.</p>
+{% endif %}
+
+{% endblock %}
