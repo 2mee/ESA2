@@ -22,7 +22,7 @@ def modulwahl(request, lv_id):  # Belegungsseite für Module
     # latest_lehrveranstaltungen = Lehrveranstaltung.objects.order_by('lv_name')
     # context = {'latest_lehrveranstaltungen': latest_lehrveranstaltungen, }
     # return render(request, 'belegungen/modul_detail.html', context)
-    lv = get_object_or_404(Lehrveranstaltung, pk=lv_id)
+
     try:
         selected_modul = lv.student_set.get(pk=request.POST['modul'])
     except(KeyError, Lehrveranstaltung.DoesNotExist):
@@ -34,10 +34,10 @@ def modulwahl(request, lv_id):  # Belegungsseite für Module
         return HttpResponseRedirect(reverse('belegungen:results', args=(lv.id,)))
 
 
-def student_detail(request, stud_id):  # zeigt Name, Vorname & Matrikelnummer und welche Kurse gewählt wurden
-    studi = get_object_or_404(Student, pk=stud_id)  # statt einen try block zu verwenden
-    modul = Lehrveranstaltung.objects.order_by('lv_name')
-    return render(request, 'belegungen/student_detail.html', {'studi': studi, 'modul': modul})
+# def student_detail(request, stud_id):  # zeigt Name, Vorname & Matrikelnummer und welche Kurse gewählt wurden
+#     studi = get_object_or_404(Student, pk=stud_id)  # statt einen try block zu verwenden
+#     modul = Lehrveranstaltung.objects.order_by('lv_name')
+#     return render(request, 'belegungen/student_detail.html', {'studi': studi, 'modul': modul})
 
 
 def results(request, lv_id):
