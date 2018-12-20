@@ -1,0 +1,18 @@
+{%  extends 'belegungen/base.html' %}
+
+{% block main_content %}
+
+<h1> Modulwahl </h1>
+
+{% if error_message %} <p><strong> {{error_message}}</strong></p> {% endif %}
+
+<form action="{% url 'belegungen:modulwahl' lv.id %}" method="post">
+{% csrf_token %}
+{% for modul in lv.modul_set.all %}
+    <input type="radio" name="modul" id="modul{{ forloop.counter }}" value="{{ modul.id }}">
+    <label for="modul{{ forloop.counter }}">{{ modul.lv_name }}</label><br>
+{% endfor %}
+<input type="submit" value="Belegen"/>
+</form>
+
+{% endblock %}

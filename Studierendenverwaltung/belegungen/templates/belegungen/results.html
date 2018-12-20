@@ -1,0 +1,16 @@
+{% extends 'belegungen/base.html' %}
+{% block main_content %}
+
+<h1>{{ lv.lv_name }}</h1>
+
+<ul>
+{% for student in lv.student_set.all %}
+    <li>
+        {{ student.student_name }} -- {{ student.matrikel_nr }} student{{ lv.lv_name|pluralize }}
+    </li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'belegungen:modulwahl' lv.id %}"> Weitere Module belegen</a>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{%  extends 'belegungen/base.html' %}
+
+{% block main_content %}
+
+<h1> {{ lv.lv_name }} </h1>
+
+{#{% if lv %}#}
+{#    <ul>#}
+{#        {% for l in lv %}#}
+{#            <li>#}
+{#                <a href = "{% url "belegungen:belegungsanzahl" l.id  %}">#}
+    <p> <b>Lehrveranstaltung: {{ lv.lv_nr }}, {{ lv.lv_name }} wird gehalten von: {{ lv.doz_name }}. </b> </p>
+{#                </a>#}
+{#            </li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#{% else %}#}
+{#    <p> Es liegen keine Belegungen vor. Bitte eine anlegen.#}
+{#        <input type="submit" value="zur Belegung" onClick="{% url "belegungen:modulwahl" lv.id %}"/>#}
+{#    </p>#}
+{#{% endif %}#}
+<input onClick="{% url "belegungen:modulwahl" lv.id %}" type="submit" value="zur Belegung" />
+{% endblock %}

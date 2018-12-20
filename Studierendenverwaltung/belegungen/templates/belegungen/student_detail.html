@@ -1,0 +1,22 @@
+{#{%  extends 'belegungen/base.html' %}#}
+{##}
+{#{% block main_content %}#}
+{##}
+{#<h1> {{ studi.stud_name }} </h1>#}
+{#{% if modul %}#}
+{#    <ul>#}
+{#        {% for m in modul %}#}
+{#            <li>#}
+{#                <a href = "{% url "belegungen:modul_detail" m.id  %}">#}
+{#                    <b>{{ m.lv_name }} gehalten von {{ m.doz_name }}</b>#}
+{#                </a>#}
+{#            </li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#{% else %}#}
+{#    <p> Es liegen keine ausgewählten Lehrveranstaltungen vor.#}
+{#        Bitte eine <a href = "{% url "belegungen:modulwahl" none %}"> belegen </a>.</p>#}
+{#{% endif %}#}
+{##}
+{##}
+{#{% endblock %}#}
