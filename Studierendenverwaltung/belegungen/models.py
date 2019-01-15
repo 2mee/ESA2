@@ -1,15 +1,10 @@
+# Lehrveranstaltungen können angelegt, angezeigt, gelöscht und geändert werden.
+# Studierende können angelegt, angezeigt, gelöscht und geändert werden.
+# Studierende können sich für Lehrveranstaltungen einschreiben.
+# Je Lehrveranstaltung wird die Liste der eingeschriebenen Studierenden angezeigt.
 
 # Create your models here.
 from django.db import models
-
-
-# !!!! Diese Klasse scheint überflüssig zu sein, da sie bereits mit dem ManyToManyField abgedeckt ist !!!!
-# class Studierendenliste(models.Model):
-#     lehrveranstaltung = models.ForeignKey('Lehrveranstaltung', on_delete=models.CASCADE)
-#     studenten = models.ForeignKey('Student', on_delete=models.CASCADE, default=0)
-#
-#     def __str__(self):
-#         return "{}, {}".format(self.lehrveranstaltung, self.studenten)
 
 
 class Student(models.Model):

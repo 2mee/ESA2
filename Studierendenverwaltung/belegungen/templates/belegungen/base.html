@@ -3,14 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
 </head>
 <body>
-<hr>
-<p>Lehrveranstaltungen 2018</p>
-<hr>
-{% block main_content %}
-{% endblock %}
+<header>
+    <div class="c1 container">
+        <div class="hdr row ">
+            <div class="left col col-auto">
+                {% block header_content_left %}
+                    <hr>
+                    <p>Lehrveranstaltungen 2018</p>
+                    <hr>
+                    <h2 class="titel" style="margin: 0 auto 50px auto">{{ page_title }}</h2>
+                {% endblock %}
+            </div>
+            <div class="center col-auto">
+                {% block main_header_content %}
 
-{% include "belegungen/footer.html" %}
+                {% endblock %}
+            </div>
+            <div class="right col col-6">
+                {% block header_content_right %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+<div class="c2 container-fluid">
+    <div class="row">
+        <div class="left col col-3">
+            {% block content_left %}
+
+            {% endblock %}
+        </div>
+        <div class="center col-auto">
+            {% block main_content %}
+
+            {% endblock %}
+        </div>
+        <div class="right col col-2">
+            {% block content_right %}
+
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+</main>
+<footer>
+    <div class="c3 container">
+        <div class="ft row ">
+            <div class="left col col-4">
+                {% block footer_content_left %}
+                    {% include "belegungen/footer.html" %}
+                {% endblock %}
+            </div>
+            <div class="center col-auto">
+                {% block main_footer_content %}
+
+                {% endblock %}
+            </div>
+            <div class="right col col-6">
+                {% block footer_content_right %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

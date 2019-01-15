@@ -1,14 +1,29 @@
 {%  extends 'belegungen/base.html' %}
 
+
 {% block main_content %}
-{% if lehrveranstaltungen %}
-    <ul>
-        {% for l in lehrveranstaltungen %}
-            <li><a href = "{% url "belegungen:modul_detail" l.id  %}"><b>{{ l.lv_name }}</b></a></li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p> Es liegen keine Lehrveranstaltungen vor. Bitte eine anlegen.</p>
-{% endif %}
+{#     <h2 class="titel" style="margin: 0 auto 50px auto">{{ page_title }}</h2>#}
+    {% if lehrveranstaltungen %}
+        <ul class="list-group">
+            {% for l in lehrveranstaltungen %}
+                <li class="list-group-item" style="height: 70px; border: none; margin: 0px auto; padding: 0">
+                    <table class="table table-sm">
+                        <th style="width: 500px">
+                            <a href = "{% url "belegungen:modul_detail" l.id  %}"style="font-size: 25px">
+                                {{ l.lv_name }}
+                            </a>
+                        </th>
+                        <th>
+                            <a href = "{% url "belegungen:modul_detail" l.id  %}" class="btn btn-info btn-sm">
+                                Details
+                            </a>
+                        </th>
+                    </table>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p> Es liegen keine Lehrveranstaltungen vor. Bitte eine anlegen.</p>
+    {% endif %}
 
 {% endblock %}

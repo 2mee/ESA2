@@ -2,22 +2,36 @@
 
 {% block main_content %}
 
-<h1> {{ lv.lv_name }} </h1>
+{#    <h2 class="titel" style="margin: 0 auto 50px auto"> {{ lv.lv_name }} </h2>#}
 
-{#{% if lv %}#}
-{#    <ul>#}
-{#        {% for l in lv %}#}
-{#            <li>#}
-{#                <a href = "{% url "belegungen:belegungsanzahl" l.id  %}">#}
-    <p> <b>Lehrveranstaltung: {{ lv.lv_nr }}, {{ lv.lv_name }} wird gehalten von: {{ lv.doz_name }}. </b> </p>
-{#                </a>#}
-{#            </li>#}
-{#        {% endfor %}#}
-{#    </ul>#}
-{#{% else %}#}
-{#    <p> Es liegen keine Belegungen vor. Bitte eine anlegen.#}
-{#        <input type="submit" value="zur Belegung" onClick="{% url "belegungen:modulwahl" lv.id %}"/>#}
-{#    </p>#}
-{#{% endif %}#}
-<input onClick="{% url "belegungen:modulwahl" lv.id %}" type="submit" value="zur Belegung" />
+    <p>
+        <b>Lehrveranstaltung: {{ lv.lv_nr }}, {{ lv.lv_name }} wird gehalten von: {{ lv.doz_name }}. </b>
+    </p>
+    <hr>
+    <h4>Eingeschriebene Studenten</h4>
+
+    <table class="table table-sm table-hover table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Vorname</th>
+            <th>Matrikelnummer</th>
+        </tr>
+        </thead>
+        {% for s in student%}
+            <tr>
+                <td>{{ s.stud_name }}</td>
+                <td>{{ s.stud_vorname }}</td>
+                <td>{{ s.matrikel_nr }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    {#    Modulwahl noch nicht verlinkt, muss in views korrigiert werden #}
+    <button type="button" class="btn btn-light">
+        <a href="{% url "belegungen:modulwahl" %}">zur Belegung</a>
+    </button>
+
+
 {% endblock %}

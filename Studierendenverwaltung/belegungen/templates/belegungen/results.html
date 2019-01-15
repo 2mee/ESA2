@@ -1,16 +1,25 @@
 {% extends 'belegungen/base.html' %}
+
+
 {% block main_content %}
 
-<h1>{{ lv.lv_name }}</h1>
+    <h2>{{ page_title }}</h2>
+    <table class="table" >
+        <tr>
+            <th>Nummer Lehrveranstaltung</th>
+            <th>Name Lehrveranstaltung</th>
+            <th>Studentenanzahl</th>
+        </tr>
 
-<ul>
-{% for student in lv.student_set.all %}
-    <li>
-        {{ student.student_name }} -- {{ student.matrikel_nr }} student{{ lv.lv_name|pluralize }}
-    </li>
-{% endfor %}
-</ul>
-
-<a href="{% url 'belegungen:modulwahl' lv.id %}"> Weitere Module belegen</a>
+        {% for l in lehrveranstaltungen%}
+            <tr>
+                <td>{{ l.lv_nr }}</td>
+                <td>{{ l.lv_name }}</td>
+                <td>{{ l.counter }}</td>
+                <td>{{ l.student }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'belegungen:index' %}"> Zurück zu den Modulen </a>
 
 {% endblock %}
