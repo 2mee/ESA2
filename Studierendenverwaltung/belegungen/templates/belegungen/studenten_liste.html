@@ -1,13 +1,16 @@
 {%  extends 'belegungen/base.html' %}
 
 
+
 {% block main_content %}
 
-    <p style="font-size: 28px">
-        <b>Lehrveranstaltung: {{ lv.lv_nr }}, {{ lv.lv_name }} wird gehalten von: {{ lv.doz_name }}. </b>
-    </p>
-    <hr>
-    <h4>Eingeschriebene Studenten</h4>
+    <form action="" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+
+        <button type="submit" class="btn btn-info">neuen Studenten hinzufügen</button>
+
+    </form>
+<hr>
 
     <table class="table table-sm table-hover table-bordered">
         <thead class="thead-dark">
@@ -15,6 +18,7 @@
             <th style="min-width: 250px">Name</th>
             <th style="min-width: 250px">Vorname</th>
             <th>Matrikelnummer</th>
+            <th>&nbsp;</th>
         </tr>
         </thead>
         {% for s in student%}
@@ -22,13 +26,11 @@
                 <td>{{ s.stud_name }}</td>
                 <td>{{ s.stud_vorname }}</td>
                 <td>{{ s.matrikel_nr }}</td>
+                <td><a href="{% url "belegungen:student_detail" s.id %}" class="fas fa-pen-square fa-2x"></a></td>
+{#                <td><a href="{% url 'studenten_verwalten' pk=studi.pk %}" class="fas fa-pen-square fa-2x"></a></td>#}
+
             </tr>
         {% endfor %}
     </table>
-
-    <button type="button" class="btn btn-warning">
-        <a href="{% url "belegungen:modulwahl" %}">zur Belegung</a>
-    </button>
-
 
 {% endblock %}

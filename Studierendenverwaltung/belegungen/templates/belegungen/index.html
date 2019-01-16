@@ -2,7 +2,8 @@
 
 
 {% block main_content %}
-{#     <h2 class="titel" style="margin: 0 auto 50px auto">{{ page_title }}</h2>#}
+
+
     {% if lehrveranstaltungen %}
         <ul class="list-group">
             {% for l in lehrveranstaltungen %}
@@ -25,5 +26,13 @@
     {% else %}
         <p> Es liegen keine Lehrveranstaltungen vor. Bitte eine anlegen.</p>
     {% endif %}
+
+    <hr>
+    <button type="button" class="btn btn-warning">
+        <a href="{% url "belegungen:modulwahl" %}">zur Modulbelegung</a>
+    </button>
+
+    <hr>
+    <a href="{% url 'belegungen:studenten_liste' %}" >Hier geht es zur Studentenübersicht</a>
 
 {% endblock %}

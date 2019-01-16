@@ -3,7 +3,6 @@
 
 __author__ = 'tzoulia'
 
-from django.conf.urls import url
 from django.urls import path
 from . import views
 
@@ -14,12 +13,14 @@ urlpatterns = [                  # urlpatterns += [] auch möglich
 
     # 127.0.0.1:8000/belegungen/2/
     path('<int:lv_id>/', views.modul_detail, name='modul_detail'),
-    # path('<int:lv_id>/', views.modulwahl, name='modulwahl'),
     path('modulwahl/', views.modulwahl, name='modulwahl'),
 
-    # path('student_detail/', views.student_detail, name='student_detail'),
+    # 127.0.0.1:8000/belegungen/studenten
+    path('studenten/', views.studenten_liste, name='studenten_liste'),
+    path('studenten/<int:stud_id>/', views.student_detail, name='student_detail'),
+    # path('studenten/(?P<pk>[0-9]+)/?) ', views.studenten_verwalten, name='studenten_verwalten'),
 
-    # 127.0.0.1:8000/belegungen/2/results
+    # 127.0.0.1:8000/belegungen/results
     path('results/', views.results, name='results'),
 
 ]

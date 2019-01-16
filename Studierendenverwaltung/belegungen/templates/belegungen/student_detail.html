@@ -1,42 +1,36 @@
 {%  extends 'belegungen/base.html' %}
 
-
 {% block main_content %}
+    <table class="table table-sm table-hover table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th style="min-width: 250px">Name</th>
+            <th style="min-width: 250px">Vorname</th>
+            <th>Matrikelnummer</th>
+        </tr>
+        </thead>
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ vorname }}</td>
+                <td>{{ matrikel }}</td>
+            </tr>
+    </table>
 
-    <h4> {{ studi.stud_name }} </h4>
-    {% if modul %}
-        <ul>
-            {% for s in lv.student_set.all %}
-                <li>
-                    {{ s.matrikel_nr }} -- {{ s.student_name }}, {{ s.student_vorname }}
-                    student{{ lv.lv_name|pluralize }}
-                </li>
-            {% endfor %}
-        </ul>
-
-        {#    <h2>Eingeschriebene Lehrveranstaltungen</h2>#}
-        {#    <p>#}
-        {#    <table class="table" table-striped table-bordered>#}
-        {#        <tr>#}
-        {#            <th>Id Lehrveranstaltung</th>#}
-        {#            <th>Name Lehrveranstaltung</th>#}
-        {#            <th>Dozent</th>#}
-        {#        </tr>#}
-        {##}
-        {#        {% for l in lehrveranstaltungen%}#}
-        {#        <tr>#}
-        {#        <td>{{ l.lv_nr }}</td>#}
-        {#        <td>{{ l.lv_name }}</td>#}
-        {#        <td>{{ l.doz_name }}</td>#}
-        {#        </tr>#}
-        {#    {% endfor %}#}
-        {#    </table>#}
-        {#    </p>#}
-    {% else %}
-        <p> {{ student.matrikel_nr }} -- {{ student.student_name }}, {{ student.student_vorname }} ist
-            in keine Lehrveranstaltungen eingeschrieben. <br>
-            Bitte eine <a href = "{% url "belegungen:modulwahl" none %}">Lehrveranstaltung belegen</a>.</p>
-    {% endif %}
+{#    {% if lv %}#}
+{#        <ul>#}
+{#            {% for s in lv.student_set.all %}#}
+{#                <li>#}
+{#                    {{ s.matrikel_nr }} -- {{ s.stud_name }}, {{ s.stud_vorname }}#}
+{#                    student{{ lv.lv_name|pluralize }}#}
+{#                </li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#                #}
+{#    {% else %}#}
+{#        <p> {{ student.matrikel_nr }} -- {{ student.student_name }}, {{ student.student_vorname }} ist#}
+{#            in keine Lehrveranstaltungen eingeschrieben. <br>#}
+{#            Bitte eine <a href = "{% url "belegungen:modulwahl" none %}">Lehrveranstaltung belegen</a>.</p>#}
+{#    {% endif %}#}
 
 
 {% endblock %}

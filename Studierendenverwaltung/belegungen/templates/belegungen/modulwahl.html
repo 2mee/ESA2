@@ -3,35 +3,22 @@
 
 
 {% block main_content %}
-{#     <h2 class="titel" style="margin: 0 auto 50px auto">{{ page_title }}</h2>#}
-    <form action="" enctype="multipart/form-data" method="post" class="form-horizontal">
+
+    <form action="" enctype="multipart/form-data" method="POST">
         {% csrf_token %}
 
-        <button type="submit" class="btn btn-info">Absenden</button>
+        <br>
+        {% for l in modul %}
+            <input type="radio" name="modul" id="modul{{ forloop.counter }}" value="{{ l.id }}">
+            <label for="modul{{ forloop.counter }}"><b>{{ l.lv_name }}</b></label><br>
+        {% endfor %}
+        <br>
+        <button type="submit" class="btn btn-info">
+            <a href="{% url "belegungen:index" %}">
+                Auswahl senden
+            </a>
+        </button>
 
     </form>
 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
- {##}
-{#    <h1> Modulwahl </h1>#}
-{##}
-{#    {% if error_message %} <p><strong> {{error_message}}</strong></p> {% endif %}#}
-{##}
-{#    <form action="{% url 'belegungen:modulwahl' lv.id %}" method="post">#}
-{#        {% csrf_token %}#}
-{#        {% for modul in lv.modul_set.all %}#}
-{#            <input type="radio" name="modul" id="modul{{ forloop.counter }}" value="{{ modul.id }}">#}
-{#            <label for="modul{{ forloop.counter }}">{{ modul.lv_name }}</label><br>#}
-{#        {% endfor %}#}
-{#        <input type="submit" value="Belegen"/>#}
-{#    </form>#}

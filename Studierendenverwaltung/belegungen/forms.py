@@ -10,4 +10,19 @@ from belegungen.models import *
 class ModulwahlForm(ModelForm):
     class Meta:
         model = Lehrveranstaltung
-        fields = '__all__'
+        labels = {
+            'lv_nr': 'Nummer Lehrveranstaltung',
+            'lv_name': 'Name Lehrveranstaltung',
+        }
+        fields = ('lv_nr', 'lv_name')
+
+
+class StudentForm(ModelForm):
+    class Meta:
+        model = Student
+        labels = {
+            'matrikel_nr': 'Matrikelnummer',
+            'stud_name': 'Name',
+            'stud_vorname': 'Vorname',
+        }
+        fields = ('matrikel_nr', 'stud_name', 'stud_vorname')
