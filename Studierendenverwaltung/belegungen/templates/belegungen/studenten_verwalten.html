@@ -2,10 +2,15 @@
 
 
 {% block main_content %}
-    <form action="" enctype="multipart/form-data" method="POST">
+    <form action="" enctype="multipart/form-data" method="POST" >
         {% csrf_token %}
-
-        <button type="submit" class="btn btn-info">neu hinzufügen</button>
+        <input type="text" name="vorname" placeholder="Vorname">
+        <input type="text" name="name" placeholder="Nachname">
+        <input type="number" name="matrikelnummer" placeholder="Matrikelnummer">
+        <br>
+        <button type="submit" class="btn btn-info">
+            neuen Studenten hinzufügen
+        </button>
 
     </form>
 <hr>

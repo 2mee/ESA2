@@ -34,12 +34,13 @@ def modulwahl(request):  # Belegungsseite für Module
         if form.is_valid():
             auswahl = form.save(commit=False)
             auswahl.save()
-            messages.success(request, u'Auswahl wurde gespeichert.')
-            # 'Speichern erfolgt' ausgeben
+            # Mitteilung über erfolgte Speicherung
+            messages.success(request, 'Auswahl wurde gespeichert.')
+
             return HttpResponseRedirect(reverse('belegungen/index.html'))
         else:
             # Fehlermeldung
-            messages.error(request, u'Eingabe konnte nicht gespeichert werden, bitte versuchen sie es erneut.')
+            messages.error(request, 'Eingabe konnte nicht gespeichert werden, bitte versuchen sie es erneut.')
             pass
     else:
         form = ModulwahlForm(instance=lv)
@@ -59,24 +60,28 @@ def modulwahl(request):  # Belegungsseite für Module
 
 
 def student_detail(request, stud_id):  # zeigt Name, Vorname & Matrikelnummer und welche Kurse gewählt wurden
-    stud = get_object_or_404(Student, pk=stud_id)  # statt einen try block zu verwenden
-    # studi = Student.objects.order_by('stud_name')
+    stud = get_object_or_404(Student, pk=stud_id)
     lv = Lehrveranstaltung.objects.order_by('lv_name')
     return render(request, 'belegungen/student_detail.html',
                   {'page_title': 'Student', 'name': stud.stud_name, 'vorname': stud.stud_vorname,
                    'matrikel': stud.matrikel_nr, 'studi': stud, 'lv': lv, })
 
 
-def studenten_liste(request, pk=None):
+def studenten_liste(request):
     # anzeigen oder hinzufügen
+    studi = Student.objects.order_by('stud_name')  # benötigt um die Studenten aufzulisten
+    return render(request, 'belegungen/studenten_liste.html', {'page_title': 'Studenten', 'studi': studi, })
+
+
+def studenten_verwalten(request, pk='stud_id'):
+    # anzeigen, löschen, ändern
     studi = Student.objects.order_by('stud_name')
-    if pk == None:
+    page_title = "Student hinzufügen"
+    if pk == pk:
         student = Student()
-        page_title = "Studenten"
     else:
         student = get_object_or_404(Student, pk=pk)
-        page_title = "Bearbeiten"
-
+        messages.error(request, "Keine Daten vorhanden")
     if request.method == 'POST':
         form = StudentForm(request.POST, instance=student)
         if form.is_valid():
@@ -87,34 +92,10 @@ def studenten_liste(request, pk=None):
             messages.error(request, "Es ist ein Fehler aufgetreten!")
     else:
         form = StudentForm(instance=student)
-        return render(request, 'belegungen/studenten_liste.html',
-                      {'page_title': page_title, 'form': form, 'student': studi, })
-
-
-# def studenten_verwalten(request, pk=None):
-#     # anzeigen , löschen, ändern
-#     studi = Student.objects.order_by('stud_name')
-#     if pk == pk:
-#         student = Student()
-#         page_title = "Details bearbeiten"
-#     else:
-#         student = get_object_or_404(Student, pk=pk)
-#         page_title = "Keine Daten vorhanden"
-#
-#     # if request.method == 'POST':
-#     #     form = StudentForm(request.POST, instance=student)
-#     #     if form.is_valid():
-#     #         form.save()
-#     #         messages.success(request, 'Gespeichert')
-#     #         return HttpResponseRedirect(reverse('belegungen/studierendenListe'))
-#     #     else:
-#     #         messages.error(request, "Es ist ein Fehler aufgetreten!")
-#     # else:
-#     #     form = StudentForm(instance=student)
-#     #     return render(request, 'belegungen/studenten_liste.html',
-#     #                   {'page_title': page_title, 'form': form, 'student': student})
-#     return render(request, 'belegungen/studenten_liste.html',
-#                       {'page_title': page_title, 'student': studi, })
+        page_title = "Student bearbeiten"
+        return render(request, 'belegungen/student_detail.html',
+                      {'page_title': page_title, 'form': form, 'student': student})
+    return render(request, 'belegungen/studenten_verwalten.html', {'page_title': page_title, 'student': studi, })
 
 
 def results(request):

@@ -22,7 +22,7 @@
                     <hr>
                     <p style="height: 100px; font-size:3vh">Lehrveranstaltungen 2018</p>
                     <hr>
-                    <h2 class="titel" style="margin: 0 auto 50px auto">{{ page_title }}</h2>
+                    <h3 class="titel" style="margin: 0 auto 50px auto">{{ page_title }}</h3>
                 {% endblock %}
             </div>
             <div class="center col-auto">
@@ -39,25 +39,25 @@
     </div>
 </header>
 <main>
-<div class="c2 container-fluid" style="min-height: 700px">
-    <div class="row">
-        <div class="left col col-3">
-            {% block content_left %}
+    <div class="c2 container-fluid" style="min-height: 700px">
+        <div class="row">
+            <div class="left col col-2">
+                {% block content_left %}
 
-            {% endblock %}
-        </div>
-        <div class="center col-auto">
-            {% block main_content %}
+                {% endblock %}
+            </div>
+            <div class="center col-auto">
+                {% block main_content %}
 
-            {% endblock %}
-        </div>
-        <div class="right col col-2">
-            {% block content_right %}
+                {% endblock %}
+            </div>
+            <div class="right col col-2">
+                {% block content_right %}
 
-            {% endblock %}
+                {% endblock %}
+            </div>
         </div>
     </div>
-</div>
 
 </main>
 <footer>
