@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a5c3eb-8d61-41fa-8c1c-ebbe5f04d0aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,12 +76,11 @@
         <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="213">
-              <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+              <caret line="33" column="58" lean-forward="true" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -393,7 +385,7 @@
       <workItem from="1547236373605" duration="90000" />
       <workItem from="1547481273585" duration="64797000" />
       <workItem from="1547688064199" duration="3150000" />
-      <workItem from="1547913306381" duration="42957000" />
+      <workItem from="1547913306381" duration="43219000" />
     </task>
     <task id="LOCAL-00001" summary="changes to models and admin site, also to database">
       <created>1545275484025</created>
@@ -430,11 +422,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547949482375</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="funktionstüchtiges studentAdd formular">
+      <created>1547961708205</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547961708205</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195836000" />
+    <option name="totallyTimeSpent" value="196098000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -721,12 +720,11 @@
     <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
-          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+          <caret line="33" column="58" lean-forward="true" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
