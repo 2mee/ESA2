@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a5c3eb-8d61-41fa-8c1c-ebbe5f04d0aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="213">
+              <caret line="17" column="64" lean-forward="true" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
               <folding>
                 <element signature="e#67#95#0" expanded="true" />
               </folding>
@@ -49,17 +51,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="76" column="81" lean-forward="true" selection-start-line="76" selection-start-column="81" selection-end-line="76" selection-end-column="81" />
+            <state relative-caret-position="466">
+              <caret line="101" column="37" lean-forward="true" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="37" />
               <folding>
-                <element signature="e#28#82#0" expanded="true" />
                 <element signature="e#1922#2899#0" />
-                <element signature="e#3506#4106#0" />
-                <element signature="e#3104#3398#0" />
-                <element signature="e#3371#4662#0" />
+                <element signature="e#2940#3251#0" />
+                <element signature="e#3368#3996#0" />
+                <element signature="e#4033#4259#0" />
               </folding>
             </state>
           </provider>
@@ -68,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_entfernen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="30" />
+            <state relative-caret-position="288">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#form#0;n#!!top" expanded="true" />
               </folding>
@@ -89,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
@@ -101,13 +102,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="105" selection-start-line="20" selection-start-column="105" selection-end-line="20" selection-end-column="105" />
-              <folding>
-                <element signature="n#style#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#0;n#table#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#th#0;n#table#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="67" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -131,6 +163,8 @@
       <find>app</find>
       <find>static</find>
       <find>student</find>
+      <find>hinz</find>
+      <find>hinzufügen</find>
     </findStrings>
     <replaceStrings>
       <replace>lv_nr</replace>
@@ -168,20 +202,21 @@
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modulwahl.html" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/student_detail.html" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/studenten_verwalten.html" />
-        <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/views.py" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/urls.py" />
-        <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_entfernen.html" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/student_entfernen.html" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html" />
+        <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul.html" />
+        <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html" />
+        <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="990" />
     <option name="y" value="20" />
-    <option name="width" value="933" />
-    <option name="height" value="1138" />
+    <option name="width" value="935" />
+    <option name="height" value="1140" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -191,6 +226,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,7 +270,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Course" />
     </panes>
   </component>
@@ -242,16 +277,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Studierendenverwaltung/Studierendenverwaltung" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../Arbeit/Sal.A/Test/myTestTool" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\t_2me\Documents\a.THB\5.Semester\OOS\WS18_19\ESA\ESA2\Studierendenverwaltung\belegungen\templates\belegungen" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\t_2me\Documents\a.THB\5.Semester\OOS\WS18_19\ESA\ESA2\Studierendenverwaltung\belegungen\templates\belegungen" />
     </key>
   </component>
@@ -346,7 +381,8 @@
       <workItem from="1547236373605" duration="90000" />
       <workItem from="1547481273585" duration="64797000" />
       <workItem from="1547688064199" duration="3150000" />
-      <workItem from="1547913306381" duration="60473000" />
+      <workItem from="1547913306381" duration="60726000" />
+      <workItem from="1548021708288" duration="3466000" />
     </task>
     <task id="LOCAL-00001" summary="changes to models and admin site, also to database">
       <created>1545275484025</created>
@@ -404,11 +440,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548020838605</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Meinen Namen im Footer erwähnt">
+      <created>1548020933699</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1548020933699</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213352000" />
+    <option name="totallyTimeSpent" value="217071000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,7 +466,7 @@
     <frame x="-7" y="-7" width="1550" height="944" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4940171" visible="true" weight="0.1818792" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4940171" visible="true" weight="0.22281879" />
       <window_info id="Structure" order="1" sideWeight="0.50598294" side_tool="true" weight="0.25637585" />
       <window_info id="Favorites" order="2" sideWeight="0.50377357" side_tool="true" weight="0.1328859" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -436,7 +479,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" sideWeight="0.49932885" weight="0.3282636" />
       <window_info anchor="bottom" content_ui="combo" id="Event Log" order="9" sideWeight="0.31342283" side_tool="true" weight="0.50570345" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6865772" visible="true" weight="0.34980989" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6865772" weight="0.34980989" />
       <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.4966443" weight="0.3282636" />
       <window_info anchor="bottom" id="TODO" order="12" sideWeight="0.49932885" weight="0.3282636" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49798658" weight="0.32918397" />
@@ -490,7 +533,9 @@
     <MESSAGE value="funktionstüchtiges studentAdd formular" />
     <MESSAGE value="Modulverwaltung hinzugefügt" />
     <MESSAGE value="ModulLöschen und StudentLöschen" />
-    <option name="LAST_COMMIT_MESSAGE" value="ModulLöschen und StudentLöschen" />
+    <MESSAGE value="Meinen Namen im Footer erwähnt" />
+    <MESSAGE value="Modulbearbeiten ergänzt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modulbearbeiten ergänzt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -565,13 +610,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/forms" />
-    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/results.html" />
     <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -616,13 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="60" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modulwahl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -648,16 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="67" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/studenten_verwalten.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -665,56 +687,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/index.html">
+    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="18">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="213">
+          <caret line="17" column="64" lean-forward="true" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
           <folding>
             <element signature="e#67#95#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/views.py">
+    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="76" column="81" lean-forward="true" selection-start-line="76" selection-start-column="81" selection-end-line="76" selection-end-column="81" />
-          <folding>
-            <element signature="e#28#82#0" expanded="true" />
-            <element signature="e#1922#2899#0" />
-            <element signature="e#3506#4106#0" />
-            <element signature="e#3104#3398#0" />
-            <element signature="e#3371#4662#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="105" selection-start-line="20" selection-start-column="105" selection-end-line="20" selection-end-column="105" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#table#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#th#0;n#table#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_entfernen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="11" column="67" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -728,10 +721,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html">
+    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        <state relative-caret-position="306">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_entfernen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="101" column="37" lean-forward="true" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="37" />
+          <folding>
+            <element signature="e#1922#2899#0" />
+            <element signature="e#2940#3251#0" />
+            <element signature="e#3368#3996#0" />
+            <element signature="e#4033#4259#0" />
+          </folding>
         </state>
       </provider>
     </entry>

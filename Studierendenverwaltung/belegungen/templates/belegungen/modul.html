@@ -1,0 +1,20 @@
+{%  extends 'belegungen/base.html' %}
+
+{% load bootstrap3 %}
+
+{% block main_content %}
+
+        <form action="" enctype="multipart/form-data" method="POST">
+            {% bootstrap_form form  %}
+            {% csrf_token %}
+
+            <br>
+            <button type="submit" class="btn btn-info">
+                Absenden
+            </button>
+
+        </form>
+
+
+
+{% endblock %}

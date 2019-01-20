@@ -41,7 +41,8 @@ def modul_verwalten(request, pk=None):
             messages.error(request, 'Es ist ein Fehler aufgetaucht!')
     else:
         form = ModulwahlForm(instance=lv)
-        return render(request, 'belegungen/modul_verwalten.html', {'page_title': page_title, 'form': form, 'lv': lehrveranstaltungen})
+
+    return render(request, 'belegungen/modul_verwalten.html', {'page_title': page_title, 'form': form, 'lv': lehrveranstaltungen})
 
 
 def modulwahl(request):  # Belegungsseite für Module

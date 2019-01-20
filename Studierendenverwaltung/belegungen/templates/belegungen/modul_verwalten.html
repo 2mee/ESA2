@@ -3,6 +3,21 @@
 
 
 {% block main_content %}
+
+        <br>
+    <form action="" enctype="multipart/form-data" method="POST">
+        {% bootstrap_form form  %}
+        {% csrf_token %}
+        <br>
+        <button type="submit" class="btn btn-info">
+            Speichern
+        </button>
+    </form>
+    <hr>
+    <br>
+    <br>
+    <h3><b>Bestehende Veranstaltungen</b></h3>
+    <br>
         <ul class="list-group">
             {% for l in lv %}
                 <li class="list-group-item" style="height: 70px; border: none; margin: 0 auto; padding: 0">
@@ -18,6 +33,11 @@
                             </a>
                         </th>
                         <th>
+                            <a href = "{% url "belegungen:modulEdit" pk=l.id  %}"  class="btn btn-warning btn-sm">
+                                Bearbeiten
+                            </a>
+                        </th>
+                        <th>
                             <a href = "{% url "belegungen:modulDelete" pk=l.id  %}" class="btn btn-danger btn-sm">
                                 X
                             </a>
@@ -26,19 +46,4 @@
                 </li>
             {% endfor %}
         </ul>
-
-    <br>
-    <hr>
-        <p> Es liegen keine Lehrveranstaltungen vor. Bitte eine anlegen.</p>
-        <form action="" enctype="multipart/form-data" method="POST">
-            {% bootstrap_form form  %}
-            {% csrf_token %}
-
-            <br>
-            <button type="submit" class="btn btn-info">
-                neues Modul hinzufügen
-            </button>
-
-        </form>
-
 {% endblock %}
