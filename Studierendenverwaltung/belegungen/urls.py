@@ -17,16 +17,14 @@ urlpatterns = [                  # urlpatterns += [] auch möglich
     path('module/List/', views.modul_verwalten, name='modulList'),
     path('module/Add/', views.modul_verwalten, name='modulAdd'),
     path('module/Edit/<int:pk>', views.modul_verwalten, name='modulEdit'),
+    path('module/<int:pk>/Delete/', views.modul_entfernen, name='modulDelete'),
 
     # 127.0.0.1:8000/belegungen/studenten
     path('studenten/', views.studenten_liste, name='studenten_liste'),
     path('studenten/<int:stud_id>/', views.student_detail, name='student_detail'),
     path('studenten/<int:stud_id>/', views.studenten_verwalten, name='student_verwalten'),
     path('studenten/studenten_verwalten/Add/', views.studenten_verwalten, name='studentAdd'),
-    path('studenten/studenten_verwalten/Delete/', views.studenten_verwalten, name='studentDelete'),
-
-    # 127.0.0.1:8000/belegungen/results
-    path('results/', views.results, name='results'),
+    path('studenten/studenten_verwalten/<int:pk>/Delete/', views.student_entfernen, name='studentDelete'),
 
 ]
 

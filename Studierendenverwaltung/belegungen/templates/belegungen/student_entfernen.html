@@ -1,0 +1,18 @@
+{%  extends 'belegungen/base.html' %}
+{% load bootstrap3 %}
+
+{% block main_content %}
+
+<form method="post">
+    {% csrf_token %}
+<p style="font-size: 1.5vw">
+Soll der Student "{{ student.stud_name }}, {{ student.stud_vorname }}"
+    mit der Matrikelnummer: "{{ student.matrikel_nr }}" jetzt aus der Datenbank entfernt werden?
+    </p>
+    <input type="submit" value="Löschen" />
+    <input type="button" class="button_active" value="Abbrechen"
+           onclick="location.href='{% url "belegungen:studenten_liste" %}';" />
+</form>
+<hr>
+
+{% endblock %}

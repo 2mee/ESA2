@@ -17,6 +17,11 @@
                                 Details
                             </a>
                         </th>
+                        <th>
+                            <a href = "{% url "belegungen:modulDelete" pk=l.id  %}" class="btn btn-danger btn-sm">
+                                X
+                            </a>
+                        </th>
                     </table>
                 </li>
             {% endfor %}
@@ -35,6 +40,5 @@
             </button>
 
         </form>
-
 
 {% endblock %}

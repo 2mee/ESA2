@@ -1,7 +1,7 @@
 
 # Create your views here.
 
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib import messages
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
@@ -44,7 +44,6 @@ def modul_verwalten(request, pk=None):
         return render(request, 'belegungen/modul_verwalten.html', {'page_title': page_title, 'form': form, 'lv': lehrveranstaltungen})
 
 
-
 def modulwahl(request):  # Belegungsseite für Module
     lv = Lehrveranstaltung()
     l_veranstaltungen = Lehrveranstaltung.objects.order_by('lv_name')
@@ -69,23 +68,26 @@ def modulwahl(request):  # Belegungsseite für Module
                                                          'modul': l_veranstaltungen, })
 
 
-    # try:
-    #     selected_modul = Lehrveranstaltung.stud.student_set.get(pk=request.POST['modul'])
-    # except(KeyError, Lehrveranstaltung.DoesNotExist):
-    #     return render(request, 'belegungen/modulwahl.html',
-    #                   {'lv': lv, 'error_message': "Bitte wählen Sie eine Lehrveranstaltung aus."})
-    # else:
-    #     selected_modul.lv_name += 1
-    #     selected_modul.save()
-    #     return HttpResponseRedirect(reverse('belegungen:results', args=(lv.id,)))
+def modul_entfernen(request, pk):
+    modul = get_object_or_404(Lehrveranstaltung, pk=pk)
+    if request.method == 'POST':
+        modul.delete()
+        messages.success(request, 'Die Lehrveranstaltung wurde gelöscht')
+        return redirect('belegungen:modulList')
+    return render(request, 'belegungen/modul_entfernen.html', {'modul': modul, })
 
 
 def student_detail(request, stud_id):  # zeigt Name, Vorname & Matrikelnummer und welche Kurse gewählt wurden
     stud = get_object_or_404(Student, pk=stud_id)
     lv = Lehrveranstaltung.objects.order_by('lv_name')
-    return render(request, 'belegungen/student_detail.html',
-                  {'page_title': 'Student', 'name': stud.stud_name, 'vorname': stud.stud_vorname,
-                   'matrikel': stud.matrikel_nr, 'studi': stud, 'lv': lv, })
+    if request.method == 'POST':
+        messages.info(request, 'Der Student wurde aus der Datenbank entfernt.')
+        # return student_entfernen(request, pk='stud_id')
+        return render(request, 'belegungen/student_detail.html', {'pk': stud.pk, })
+    else:
+        return render(request, 'belegungen/student_detail.html',
+                      {'page_title': 'Student', 'name': stud.stud_name, 'vorname': stud.stud_vorname,
+                       'matrikel': stud.matrikel_nr, 'studi': stud, 'lv': lv, 'pk': stud.pk, })
 
 
 def studenten_liste(request):
@@ -94,20 +96,12 @@ def studenten_liste(request):
     return render(request, 'belegungen/studenten_liste.html', {'page_title': 'Studenten', 'studi': studi, })
 
 
-def studenten_verwalten(request, pk='stud_id'):
-    # anzeigen, löschen, ändern
+def studenten_verwalten(request):
+    # anzeigen, ändern
     studi = Student.objects.order_by('stud_name')
     page_title = "Student hinzufügen"
     student = Student()
-    # wurde eine Studenten Id mit Daten übergeben, dann Form aufrufen
-    # if pk == pk:
-    #     student = Student()
-    # # wenn sie keine Daten trägt dann Fehlermeldung
-    # else:
-    #     stud = get_object_or_404(Student, pk=pk)
-    #     messages.error(request, "Keine Daten vorhanden")
 
-    # werden Daten übertragen, dann Formular ausfüllen und absenden
     if request.method == 'POST':
         form = StudentForm(request.POST, instance=student)
         # Bei Gültigkeit der Formulardaten speichern und bestätigen
@@ -129,24 +123,10 @@ def studenten_verwalten(request, pk='stud_id'):
                   {'page_title': page_title, 'form': form, 'student': studi, })
 
 
-def results(request):
-    lv = Lehrveranstaltung.objects.order_by('lv_name')
-    # lv = get_object_or_404(Lehrveranstaltung, pk=id)
-    # belegungsanzahl = 0
-    counter = 0
-    lv_details = Lehrveranstaltung.objects.order_by(pk=id)
-    studi = Lehrveranstaltung.stud.count()
-    for l in lv_details:
-        for s in studi:
-            counter = studi(s)
-        print(counter(l))
-
-    # for l in belegungen:
-    #     count += 1
-    #     belegungsanzahl = count(l)
-    #     return str(belegungsanzahl)
-
-    return render(request, 'belegungen/results.html', {'page_title': 'Belegungen pro Lehrveranstaltung',
-                                                       'lehrveranstaltungen': lv,
-                                                       'counter': counter, 'student': studi, })
-
+def student_entfernen(request, pk):
+    student = get_object_or_404(Student, pk=pk)
+    if request.method == 'POST':
+        student.delete()
+        messages.success(request, 'Student wurde gelöscht')
+        return redirect('belegungen:studenten_liste')
+    return render(request, 'belegungen/student_entfernen.html', {'student': student, })

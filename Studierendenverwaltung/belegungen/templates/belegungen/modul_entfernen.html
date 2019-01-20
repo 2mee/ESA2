@@ -1,0 +1,16 @@
+{%  extends 'belegungen/base.html' %}
+{% load bootstrap3 %}
+
+{% block main_content %}
+
+<form method="post">
+    {% csrf_token %}
+    <p style="font-size: 1.5vw">Die Lehrveranstaltung "{{ modul.lv_nr }}, {{ modul.lv_name }}" wird jetzt aus der Datenbank entfernt!</p>
+
+    <input type="submit" value="Löschen">
+    <input type="button" class="button_active" value="Abbrechen"
+           onclick="location.href='{% url "belegungen:modulList" %}';" />
+</form>
+<hr>
+
+{% endblock %}
