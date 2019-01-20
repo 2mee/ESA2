@@ -1,0 +1,40 @@
+{%  extends 'belegungen/base.html' %}
+{% load bootstrap3 %}
+
+
+{% block main_content %}
+        <ul class="list-group">
+            {% for l in lv %}
+                <li class="list-group-item" style="height: 70px; border: none; margin: 0 auto; padding: 0">
+                    <table class="table table-sm">
+                        <th style="width: 500px">
+                            <a href = "{% url "belegungen:modul_detail" l.id  %}" style="font-size: 2vh">
+                                {{ l.lv_name }}
+                            </a>
+                        </th>
+                        <th>
+                            <a href = "{% url "belegungen:modul_detail" l.id  %}" class="btn btn-info btn-sm">
+                                Details
+                            </a>
+                        </th>
+                    </table>
+                </li>
+            {% endfor %}
+        </ul>
+
+    <br>
+    <hr>
+        <p> Es liegen keine Lehrveranstaltungen vor. Bitte eine anlegen.</p>
+        <form action="" enctype="multipart/form-data" method="POST">
+            {% bootstrap_form form  %}
+            {% csrf_token %}
+
+            <br>
+            <button type="submit" class="btn btn-info">
+                neues Modul hinzufügen
+            </button>
+
+        </form>
+
+
+{% endblock %}

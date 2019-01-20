@@ -11,9 +11,7 @@ from .models import Lehrveranstaltung, Student
 
 def index(request):  # Liste der verfügbaren Module
     lehrveranstaltungen = Lehrveranstaltung.objects.order_by('lv_name')
-    context = {'page_title': 'Liste angebotener Lehrveranstaltungen',
-               'lehrveranstaltungen': lehrveranstaltungen, }
-    return render(request, 'belegungen/index.html', context)
+    return render(request, 'belegungen/index.html', {'lehrveranstaltungen': lehrveranstaltungen, })
 
 
 def modul_detail(request, lv_id):  # zeigt welche Matrikelnummern zugehörig sind und zählt sie zusammen
@@ -22,6 +20,29 @@ def modul_detail(request, lv_id):  # zeigt welche Matrikelnummern zugehörig sin
     # student = get_object_or_404(Student, pk=id)
     student = Student.objects.order_by('stud_name')
     return render(request, 'belegungen/modul_detail.html', {'page_title': lv.lv_name, 'lv': lv, 'student': student, })
+
+
+def modul_verwalten(request, pk=None):
+    lehrveranstaltungen = Lehrveranstaltung.objects.order_by('lv_name')
+    if pk == None:
+        lv = Lehrveranstaltung()
+        page_title = 'Lehrveranstaltung hinzufügen'
+    else:
+        lv = get_object_or_404(Lehrveranstaltung, pk=pk)
+        page_title = 'Lehrveranstaltung bearbeiten'
+
+    if request.method == 'POST':
+        form = ModulwahlForm(request.POST, instance=lv)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Gespeichert')
+            return HttpResponseRedirect(reverse('belegungen:index'))
+        else:
+            messages.error(request, 'Es ist ein Fehler aufgetaucht!')
+    else:
+        form = ModulwahlForm(instance=lv)
+        return render(request, 'belegungen/modul_verwalten.html', {'page_title': page_title, 'form': form, 'lv': lehrveranstaltungen})
+
 
 
 def modulwahl(request):  # Belegungsseite für Module
