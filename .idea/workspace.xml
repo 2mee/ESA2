@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a5c3eb-8d61-41fa-8c1c-ebbe5f04d0aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_entfernen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/student_entfernen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modulwahl.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modulwahl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/results.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/student_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/student_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/studenten_liste.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/studenten_liste.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/student_entfernen.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
@@ -95,6 +85,15 @@
               <folding>
                 <element signature="n#style#0;n#p#0;n#form#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -152,7 +151,6 @@
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/fooger.html" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/footer.html" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/base.html" />
-        <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/Studierendenverwaltung/urls.py" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/detail.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
@@ -175,6 +173,7 @@
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_verwalten.html" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/modul_entfernen.html" />
         <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/student_entfernen.html" />
+        <option value="$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html" />
       </list>
     </option>
   </component>
@@ -347,7 +346,7 @@
       <workItem from="1547236373605" duration="90000" />
       <workItem from="1547481273585" duration="64797000" />
       <workItem from="1547688064199" duration="3150000" />
-      <workItem from="1547913306381" duration="60372000" />
+      <workItem from="1547913306381" duration="60473000" />
     </task>
     <task id="LOCAL-00001" summary="changes to models and admin site, also to database">
       <created>1545275484025</created>
@@ -398,11 +397,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547961776311</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ModulLöschen und StudentLöschen">
+      <created>1548020838605</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1548020838605</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213251000" />
+    <option name="totallyTimeSpent" value="213352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -483,7 +489,8 @@
     <MESSAGE value="studentenlisten und verlinkungen" />
     <MESSAGE value="funktionstüchtiges studentAdd formular" />
     <MESSAGE value="Modulverwaltung hinzugefügt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modulverwaltung hinzugefügt" />
+    <MESSAGE value="ModulLöschen und StudentLöschen" />
+    <option name="LAST_COMMIT_MESSAGE" value="ModulLöschen und StudentLöschen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -577,9 +584,6 @@
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/models.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -721,6 +725,13 @@
           <folding>
             <element signature="n#style#0;n#p#0;n#form#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Studierendenverwaltung/belegungen/templates/belegungen/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
         </state>
       </provider>
     </entry>
