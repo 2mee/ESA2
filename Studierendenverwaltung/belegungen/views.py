@@ -68,7 +68,7 @@ def student_detail(request, stud_id):  # zeigt Name, Vorname & Matrikelnummer un
 
 
 def studenten_liste(request):
-    # anzeigen oder hinzufügen
+    # anzeigen aller Studenten
     studi = Student.objects.order_by('stud_name')  # benötigt um die Studenten aufzulisten
     return render(request, 'belegungen/studenten_liste.html', {'page_title': 'Studenten', 'studi': studi, })
 
@@ -77,25 +77,35 @@ def studenten_verwalten(request, pk='stud_id'):
     # anzeigen, löschen, ändern
     studi = Student.objects.order_by('stud_name')
     page_title = "Student hinzufügen"
-    if pk == pk:
-        student = Student()
-    else:
-        student = get_object_or_404(Student, pk=pk)
-        messages.error(request, "Keine Daten vorhanden")
+    student = Student()
+    # wurde eine Studenten Id mit Daten übergeben, dann Form aufrufen
+    # if pk == pk:
+    #     student = Student()
+    # # wenn sie keine Daten trägt dann Fehlermeldung
+    # else:
+    #     stud = get_object_or_404(Student, pk=pk)
+    #     messages.error(request, "Keine Daten vorhanden")
+
+    # werden Daten übertragen, dann Formular ausfüllen und absenden
     if request.method == 'POST':
         form = StudentForm(request.POST, instance=student)
+        # Bei Gültigkeit der Formulardaten speichern und bestätigen
         if form.is_valid():
             form.save()
             messages.success(request, 'Gespeichert')
-            return HttpResponseRedirect(reverse('belegungen/studenten_liste'))
+            return HttpResponseRedirect(reverse('belegungen:studenten_liste'))
+        # sonst Fehlermeldung
         else:
             messages.error(request, "Es ist ein Fehler aufgetreten!")
+    # liegen keine Daten vor, Formular zur Verfügung stellen
     else:
-        form = StudentForm(instance=student)
         page_title = "Student bearbeiten"
-        return render(request, 'belegungen/student_detail.html',
-                      {'page_title': page_title, 'form': form, 'student': student})
-    return render(request, 'belegungen/studenten_verwalten.html', {'page_title': page_title, 'student': studi, })
+        form = StudentForm(instance=student)
+
+        # return studenten_verwalten(request, pk=None)
+
+    return render(request, 'belegungen/studenten_verwalten.html',
+                  {'page_title': page_title, 'form': form, 'student': studi, })
 
 
 def results(request):

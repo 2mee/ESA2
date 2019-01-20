@@ -8,7 +8,7 @@ from django.db import models
 
 
 class Student(models.Model):
-    matrikel_nr = models.IntegerField(default=0)
+    matrikel_nr = models.IntegerField(default=None)
     stud_name = models.CharField(max_length=150)
     stud_vorname = models.CharField(max_length=150)
 

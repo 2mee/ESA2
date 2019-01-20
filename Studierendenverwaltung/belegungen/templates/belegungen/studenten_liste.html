@@ -2,31 +2,32 @@
 
 {% block main_content %}
 
-<a href="{% url "belegungen:studenten_verwalten" %}" class="btn btn-warning">Studenten hinzufügen</a>
+<hr>
+<a href="{% url "belegungen:studentAdd" %}" class="btn btn-info">
+    Studenten hinzufügen
+</a>
 <hr>
 
-     <form action="" enctype="multipart/form-data" method="POST">
-        {% csrf_token %}
-         <table class="table table-sm table-hover table-bordered">
-             <thead class="thead-dark">
-             <tr>
-                 <th style="min-width: 250px">Name</th>
-                 <th style="min-width: 250px">Vorname</th>
-                 <th>Matrikelnummer</th>
-                 <th>&nbsp;</th>
-             </tr>
-             </thead>
-             {% for s in studi%}
-                 <tr>
-                     <td>{{ s.stud_name }}</td>
-                     <td>{{ s.stud_vorname }}</td>
-                     <td>{{ s.matrikel_nr }}</td>
-                     <td><a href="{% url "belegungen:student_detail" s.id %}" class="fas fa-pen-square fa-2x"></a></td>
-                     {% comment %}<td><a href="{% url 'studenten_verwalten' pk=studi.pk %}" class="fas fa-pen-square fa-2x"></a></td>{% endcomment %}
+ <table class="table table-sm table-hover table-bordered">
+     <thead class="thead-dark">
+     <tr>
+         <th style="min-width: 250px">Name</th>
+         <th style="min-width: 250px">Vorname</th>
+         <th>Matrikelnummer</th>
+         <th>&nbsp;</th>
+     </tr>
+     </thead>
+     {% for s in studi%}
+         <tr>
+             <td>{{ s.stud_name }}</td>
+             <td>{{ s.stud_vorname }}</td>
+             <td>{{ s.matrikel_nr }}</td>
+             <td><a href="{% url "belegungen:student_detail" s.id %}" class="fas fa-pen-square fa-2x"></a></td>
+{#                     <td><a href="{% url 'studenten_verwalten' pk=studi.pk %}" class="fas fa-pen-square fa-2x"></a></td>#}
 
-                 </tr>
-             {% endfor %}
-         </table>
-    </form>
+         </tr>
+     {% endfor %}
+ </table>
+
 
 {% endblock %}

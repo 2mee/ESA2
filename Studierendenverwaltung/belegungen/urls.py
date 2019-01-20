@@ -18,8 +18,8 @@ urlpatterns = [                  # urlpatterns += [] auch möglich
     # 127.0.0.1:8000/belegungen/studenten
     path('studenten/', views.studenten_liste, name='studenten_liste'),
     path('studenten/<int:stud_id>/', views.student_detail, name='student_detail'),
-    path('studenten/<int:stud_id>/studenten_verwalten/', views.studenten_verwalten, name='student_verwalten'),
-    path('studenten/studenten_verwalten/', views.studenten_verwalten, name='studenten_verwalten'),
+    path('studenten/<int:stud_id>/', views.studenten_verwalten, name='student_verwalten'),
+    path('studenten/studenten_verwalten/', views.studenten_verwalten, name='studentAdd'),
 
     # 127.0.0.1:8000/belegungen/results
     path('results/', views.results, name='results'),

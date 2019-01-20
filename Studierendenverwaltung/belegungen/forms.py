@@ -15,7 +15,7 @@ class ModulwahlForm(ModelForm):
             'lv_name': 'Name Lehrveranstaltung',
             'doz_name': 'Name des Dozenten',
         }
-        fields = ['lv_nr', 'lv_name']
+        fields = ['lv_nr', 'lv_name', 'doz_name']
 
 
 class StudentForm(ModelForm):

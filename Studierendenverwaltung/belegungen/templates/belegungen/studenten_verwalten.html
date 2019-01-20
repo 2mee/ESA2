@@ -1,12 +1,13 @@
 {%  extends 'belegungen/base.html' %}
-
+{% load bootstrap3 %}
 
 {% block main_content %}
-    <form action="" enctype="multipart/form-data" method="POST" >
+
+{#    action "" heisst, dass es an die selbe adresse schickt von der es kam #}
+    <form action="" enctype="multipart/form-data" method="POST">
+        {% bootstrap_form form  %}
         {% csrf_token %}
-        <input type="text" name="vorname" placeholder="Vorname">
-        <input type="text" name="name" placeholder="Nachname">
-        <input type="number" name="matrikelnummer" placeholder="Matrikelnummer">
+
         <br>
         <button type="submit" class="btn btn-info">
             neuen Studenten hinzufügen
